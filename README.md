@@ -13,6 +13,10 @@ own catalog, stock, customers, orders and team.
 > The production repository is private. This one was rewritten from it with everything specific to
 > one market, provider or channel removed, so the part that remains can be read end to end. See
 > [What was left out](#what-was-left-out).
+>
+> A live demo of the full product's storefront, with invented data:
+> [demo.chatalog.com.ua/shop/lumi_studio](https://demo.chatalog.com.ua/shop/lumi_studio). The admin is
+> shown on request. The demo runs on my own hardware, so it may occasionally be offline.
 
 It is a compact, readable reference for a few things that are easy to get wrong in this kind of
 system: **tenant isolation**, **stock that never oversells**, an **order status flow** that keeps
