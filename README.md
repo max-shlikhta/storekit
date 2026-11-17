@@ -1,5 +1,9 @@
 # Storekit
 
+[![CI](https://github.com/max-shlikhta/storekit/actions/workflows/ci.yml/badge.svg)](https://github.com/max-shlikhta/storekit/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/max-shlikhta/storekit/actions/workflows/codeql.yml/badge.svg)](https://github.com/max-shlikhta/storekit/actions/workflows/codeql.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 A multi-store back office: one installation runs many independent online stores, each with its
 own catalog, stock, customers, orders and team.
 
@@ -18,6 +22,25 @@ its books straight, and **role-based visibility** (staff never see purchase pric
 - **Admin:** Next.js 16 (App Router), React 19, Tailwind CSS 4, phone-first
 - **Tests:** `node:test` integration tests against a real PostgreSQL (62 API tests, plus unit tests)
 - **CI:** GitHub Actions runs format, lint, typecheck and all tests on every push
+
+## Screenshots
+
+The admin follows the system's light or dark theme and works on a phone.
+
+<p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/orders-dark.jpg" />
+    <img alt="Orders list" src="docs/screenshots/orders-light.jpg" width="49%" />
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/product-dark.jpg" />
+    <img alt="Product with variants and stock" src="docs/screenshots/product-light.jpg" width="49%" />
+  </picture>
+</p>
+
+<p>
+  <img alt="Orders on a phone" src="docs/screenshots/orders-mobile.jpg" width="240" />
+</p>
 
 ## Run it
 
