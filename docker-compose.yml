@@ -1,0 +1,20 @@
+services:
+  postgres:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: storekit_dev
+      POSTGRES_USER: storekit
+      POSTGRES_PASSWORD: storekit
+    ports:
+      - '127.0.0.1:54329:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -h 127.0.0.1 -U storekit -d storekit_dev']
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgres_data:

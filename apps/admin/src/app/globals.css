@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+/* Every colour is a token: light by default, dark when the system asks for it. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --border: #e3e6ea;
+  --text: #15181d;
+  --muted: #667085;
+  --accent: #3b5bdb;
+  --accent-text: #ffffff;
+  --danger: #c92a2a;
+  --status-new: #3b5bdb;
+  --status-confirmed: #7048e8;
+  --status-shipped: #e8590c;
+  --status-completed: #2b8a3e;
+  --status-cancelled: #868e96;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1216;
+    --surface: #171b21;
+    --border: #272d36;
+    --text: #eef1f5;
+    --muted: #98a2b3;
+    --accent: #748ffc;
+    --accent-text: #0f1216;
+    --danger: #ff8787;
+    --status-new: #748ffc;
+    --status-confirmed: #b197fc;
+    --status-shipped: #ffa94d;
+    --status-completed: #69db7c;
+    --status-cancelled: #adb5bd;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-danger: var(--danger);
+  --color-status-new: var(--status-new);
+  --color-status-confirmed: var(--status-confirmed);
+  --color-status-shipped: var(--status-shipped);
+  --color-status-completed: var(--status-completed);
+  --color-status-cancelled: var(--status-cancelled);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+}
+
+/* Phone first: inputs stay at least 44px high with a 16px font, so iOS does not zoom in. */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+button,
+a {
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+{
+  "name": "storekit",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:api dev:admin",
+    "dev:api": "npm run dev -w @storekit/api",
+    "dev:admin": "npm run dev -w @storekit/admin",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run test --workspaces --if-present",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
+    "db:up": "docker compose up -d --wait postgres",
+    "db:down": "docker compose down",
+    "db:migrate": "npm run db:migrate -w @storekit/api",
+    "db:migrate:undo": "npm run db:migrate:undo -w @storekit/api",
+    "db:migration:new": "npm run db:migration:new -w @storekit/api --",
+    "db:seed": "npm run db:seed -w @storekit/api",
+    "user:create": "npm run user:create -w @storekit/api --"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "npm-run-all2": "^8.0.4",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.0"
+  }
+}
