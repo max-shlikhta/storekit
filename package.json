@@ -37,5 +37,10 @@
     "prettier": "^3.9.10",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.0"
+  },
+  "overrides": {
+    "uuid": "^14.0.3",
+    "glob": "^14.0.6",
+    "minimatch": "^11.0.9"
   }
 }
